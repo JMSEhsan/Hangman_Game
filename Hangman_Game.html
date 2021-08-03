@@ -32,6 +32,7 @@
         
         //Get a guess from the player
         var guess = prompt("Guess a letter or click cancel to stop playing.");
+        guess = guess.toLowerCase();
         if (guess === null){    
             //Exit the game loop
             break;               
@@ -56,4 +57,5 @@
 
 </script>   
 </body>
+
 </html>
