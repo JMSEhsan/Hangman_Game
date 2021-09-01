@@ -23,13 +23,13 @@ var setupAnswerArray = function(word){
 var showPlayersProgress = function(answerArray){
     console.log(setupAnswerArray(pickWord()));
 };
-console.log("ppp");
-// function to get a guess
-// var getGuess = function(){
-//     const prompt = require('prompt-sync')();
-//     const guess = prompt('Enter a single letter: ');
-    
-// };
-// console.log(getGuess());
+
+//function to get a guess
+var getGuess = function(){
+    const prompt = require('prompt-sync')();
+    const guess = prompt('Enter a single letter: ');
+    console.log(guess);
+};
+  
 
 
