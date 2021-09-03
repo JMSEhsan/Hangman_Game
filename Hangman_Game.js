@@ -25,11 +25,11 @@ var showPlayersProgress = function(answerArray){
 };
 
 //function to get a guess
-var getGuess = function(){
-    const prompt = require('prompt-sync')();
-    const guess = prompt('Enter a single letter: ');
-    console.log(guess);
-};
+//var getGuess = function(){
+ //   const prompt = require('prompt-sync')();
+  //  const guess = prompt('Enter a single letter: ');
+   // console.log(guess);
+//};
   
 
 
