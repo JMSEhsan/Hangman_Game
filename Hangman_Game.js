@@ -24,12 +24,21 @@ var showPlayersProgress = function(answerArray){
     console.log(setupAnswerArray(pickWord()));
 };
 
+console.log(".....");
 //function to get a guess
 //var getGuess = function(){
- //   const prompt = require('prompt-sync')();
-  //  const guess = prompt('Enter a single letter: ');
-   // console.log(guess);
+    //"use strict";
+    const ps= require("prompt-sync");
+    const prompt = ps();
+    let name = prompt("Enter a single letter: ");
+    
+    
+    
 //};
+
+//console.log(getGuess());
+console.log(`Hello ${name}`);
+
   
 
 
