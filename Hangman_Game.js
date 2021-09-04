@@ -26,8 +26,8 @@ var showPlayersProgress = function(answerArray){
 
 console.log(".....");
 //function to get a guess
-//var getGuess = function(){
-    //"use strict";
+var getGuess = function(){
+    "use strict";
     const ps= require("prompt-sync");
     const prompt = ps();
     let name = prompt("Enter a single letter: ");
