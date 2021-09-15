@@ -20,24 +20,20 @@ var setupAnswerArray = function(word){
 
 // show the player their progress
 var showPlayerProgress = function(answerArray){
-    console.log(answerArray.join(" "))
-    //console.log(setupAnswerArray(pickWord()));
+    console.log(" ");
+    console.log(answerArray.join(" "));
+    console.log(" ");
 };
 
-console.log(".....");
+//console.log(".....");
 //function to get a guess
 
 var getGuess = function(){
-    //"use strict";
-    
     const prompt= require("prompt-sync")();
-    //const prompt = ps();
+//const prompt = ps();
     let guess = prompt("Enter a single letter: ");
-    console.log(guess);
     return guess;
 };
-
-console.log(getGuess());
 
 var updateGameState = function (guess, word, answerArray) {
     var count = 0;
@@ -48,14 +44,17 @@ var updateGameState = function (guess, word, answerArray) {
         }
     }
     return count;
-    // Update answerArray and return a number showing how many
-    // times the guess appears in the word so remainingLetters
-    // can be updated
-    };
+// Update answerArray and return a number showing how many
+// times the guess appears in the word so remainingLetters
+// can be updated
+};
+
 var showAnswerAndCongratulatePlayer = function (answerArray) {
+    console.log(" ");
     console.log("Good job! the answer was: "+ word)
-    // Use alert to show the answer and congratulate the player
-    };
+    console.log(" ");
+// Use alert to show the answer and congratulate the player
+};
 
 var word = pickWord();
 var answerArray = setupAnswerArray(word);
@@ -66,14 +65,16 @@ while (remainingLetters > 0) {
     var guess = getGuess();
     if (guess === null) {
     break;
-    } else if (guess.length !== 1) {
-    alert("Please enter a single letter.");
-    } else {
+    } 
+    else if (guess.length !== 1) {
+    console.log(" ");
+    console.log("Please enter a single letter!");
+    } 
+    else {
     var correctGuesses = updateGameState(guess, word, answerArray);
     remainingLetters -= correctGuesses;
     }
-    }
-    showAnswerAndCongratulatePlayer(answerArray);
-  
+}
+showAnswerAndCongratulatePlayer(answerArray);
 
-
+//End
