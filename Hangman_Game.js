@@ -34,12 +34,13 @@ var getGuess = function(){
     //const prompt = ps();
     let guess = prompt("Enter a single letter: ");
     console.log(guess);
+    return guess;
 };
 
 console.log(getGuess());
 
 var updateGameState = function (guess, word, answerArray) {
-    
+    var count = 0;
     for ( var j = 0; j < word.length; j++){
         if (word[j] === guess && answerArray[j] === "_"){
             answerArray[j] = guess;
