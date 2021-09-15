@@ -75,6 +75,7 @@ while (remainingLetters > 0) {
     remainingLetters -= correctGuesses;
     }
 }
+showPlayerProgress(answerArray);
 showAnswerAndCongratulatePlayer(answerArray);
 
 //End
