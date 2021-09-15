@@ -9,7 +9,6 @@ var pickWord = function(){
     return words[Math.floor(words.length*Math.random())];
 };
 
-
 // return the answer array
 var setupAnswerArray = function(word){
     var answerArray = [];
@@ -20,22 +19,60 @@ var setupAnswerArray = function(word){
 };
 
 // show the player their progress
-var showPlayersProgress = function(answerArray){
-    console.log(setupAnswerArray(pickWord()));
+var showPlayerProgress = function(answerArray){
+    console.log(answerArray.join(" "))
+    //console.log(setupAnswerArray(pickWord()));
 };
 
 console.log(".....");
 //function to get a guess
+
 var getGuess = function(){
     //"use strict";
+    
     const prompt= require("prompt-sync")();
     //const prompt = ps();
     let guess = prompt("Enter a single letter: ");
+    console.log(guess);
 };
 
 console.log(getGuess());
 
-//
+var updateGameState = function (guess, word, answerArray) {
+    
+    for ( var j = 0; j < word.length; j++){
+        if (word[j] === guess && answerArray[j] === "_"){
+            answerArray[j] = guess;
+            count++;
+        }
+    }
+    return count;
+    // Update answerArray and return a number showing how many
+    // times the guess appears in the word so remainingLetters
+    // can be updated
+    };
+var showAnswerAndCongratulatePlayer = function (answerArray) {
+    console.log("Good job! the answer was: "+ word)
+    // Use alert to show the answer and congratulate the player
+    };
+
+var word = pickWord();
+var answerArray = setupAnswerArray(word);
+var remainingLetters = word.length;
+
+while (remainingLetters > 0) {
+    showPlayerProgress(answerArray);
+    var guess = getGuess();
+    if (guess === null) {
+    break;
+    } else if (guess.length !== 1) {
+    alert("Please enter a single letter.");
+    } else {
+    var correctGuesses = updateGameState(guess, word, answerArray);
+    remainingLetters -= correctGuesses;
+    }
+    }
+    showAnswerAndCongratulatePlayer(answerArray);
   
 
 
