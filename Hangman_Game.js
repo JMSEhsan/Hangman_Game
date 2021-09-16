@@ -20,9 +20,7 @@ var setupAnswerArray = function(word){
 
 // show the player their progress
 var showPlayerProgress = function(answerArray){
-    console.log(" ");
-    console.log(answerArray.join(" "));
-    console.log(" ");
+    console.log('\n'+answerArray.join(" ")+'\n');    
 };
 
 //console.log(".....");
@@ -50,9 +48,9 @@ var updateGameState = function (guess, word, answerArray) {
 };
 
 var showAnswerAndCongratulatePlayer = function (answerArray) {
-    console.log(" ");
-    console.log("Good job! the answer was: "+ word)
-    console.log(" ");
+    //console.log(" ");
+    console.log("Good job! the answer was: "+ word+'\n');
+    //console.log(" ");
 // Use alert to show the answer and congratulate the player
 };
 
@@ -67,8 +65,7 @@ while (remainingLetters > 0) {
     break;
     } 
     else if (guess.length !== 1) {
-    console.log(" ");
-    console.log("Please enter a single letter!");
+    console.log('\n'+"Please enter a single letter!");
     } 
     else {
     var correctGuesses = updateGameState(guess, word, answerArray);
